@@ -2,9 +2,10 @@
   "name": "nexas",
   "version": "1.0.0",
   "description": "An application with matchmaking proximity features for matching Engineers",
-  "main": "index.js",
+  "type": "module",
+  "main": "server.js",
   "scripts": {
-    "devStart": "nodemon script.js"
+    "devStart": "nodemon server.js"
   },
   "repository": {
     "type": "git",
