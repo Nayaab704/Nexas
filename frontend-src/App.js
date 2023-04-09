@@ -4,6 +4,9 @@ import Home from './views/Home';
 import Login from "./views/Login";
 import { Route, Routes } from 'react-router-dom';
 import MatchPeers from './views/MatchPeers';
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 function App() {
 
