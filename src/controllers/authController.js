@@ -1,17 +1,14 @@
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import User from '../model/User.js';
-
 import path from 'path';
 import dotenv from 'dotenv';
-//import { path as appRootPath } from 'app-root-path';
 import pkg from 'app-root-path';
 const appRootPath = pkg.path;
 
 
 dotenv.config({ path: path.resolve(appRootPath, './src/.env') });
 
-// Rest of the code ...
 
 
 // Create a new user account

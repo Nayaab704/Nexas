@@ -1,4 +1,4 @@
-//const mongoose = require('mongoose');
+//relationship between users and groups, associate users with groups and assign roles to them within those groups.
 import mongoose from 'mongoose';
 
 const userGroupSchema = new mongoose.Schema({

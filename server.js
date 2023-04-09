@@ -1,54 +1,10 @@
-// import express from "express";
-// import mongoose from "mongoose";
-// import User from "./src/model/User.js";
-// import Group from "./src/model/Group.js";
-// import User_Group from "./src/model/User_groups.js";
-// import authRoutes from './src/routes/authRoutes.js';
-
-
-// import path from 'path';
-// import dotenv from 'dotenv';
-
-
-// import { path as appRootPath } from 'app-root-path';
-
-// dotenv.config({ path: path.resolve(appRootPath, './src/.env') });
-
-
-
-
-// // import path from 'path';
-// // // import dotenv from 'dotenv';
-// // // dotenv.config({ path: path.resolve(__dirname, './.env') });
-
-
-
-// const app = express();
-
-// app.use(express.json());
-// app.use(authRoutes);
-
-// const uri = "mongodb+srv://rootuser:password%401@nexascluster.8876mb9.mongodb.net/?retryWrites=true&w=majority";
-
-// async function connect() {
-//   try {
-//     await mongoose.connect(uri);
-//     console.log("Connected to MongoDB");
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
-
-// connect();
-
-// export default app;
-
 import express from "express";
 import mongoose from "mongoose";
 import User from "./src/model/User.js";
 import Group from "./src/model/Group.js";
-import User_Group from "./src/model/User_groups.js";
+import User_Group from "./src/model/User_Group.js";
 import authRoutes from './src/routes/authRoutes.js';
+import groupRoutes from './src/routes/groupRoutes.js';
 
 import path from 'path';
 import dotenv from 'dotenv';
@@ -62,6 +18,7 @@ const app = express();
 
 app.use(express.json());
 app.use(authRoutes);
+app.use('/group', groupRoutes);
 
 const uri = "mongodb+srv://rootuser:password%401@nexascluster.8876mb9.mongodb.net/?retryWrites=true&w=majority";
 
