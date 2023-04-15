@@ -1,10 +1,8 @@
 import express from "express";
 import mongoose from "mongoose";
 import User from "./src/model/User.js";
-import Group from "./src/model/Group.js";
-import User_Group from "./src/model/User_Group.js";
 import authRoutes from './src/routes/authRoutes.js';
-import groupRoutes from './src/routes/groupRoutes.js';
+
 
 import path from 'path';
 import dotenv from 'dotenv';
@@ -18,7 +16,7 @@ const app = express();
 
 app.use(express.json());
 app.use(authRoutes);
-app.use('/group', groupRoutes);
+//app.use('/group', groupRoutes);
 
 const uri = "mongodb+srv://rootuser:password%401@nexascluster.8876mb9.mongodb.net/?retryWrites=true&w=majority";
 
@@ -32,5 +30,7 @@ async function connect() {
 }
 
 connect();
+
+
 
 export default app;

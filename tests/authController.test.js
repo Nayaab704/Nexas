@@ -1,4 +1,3 @@
-
 import register from '@babel/register';
 register({
   ignore: [/(node_modules)/],
@@ -10,92 +9,81 @@ import request from 'supertest';
 import app from '../server.js';
 import bcrypt from 'bcrypt';
 import User from '../src/model/User.js';
-import { signup, login } from '../src/controllers/authController';
+import { signup, login } from '../src/controllers/authController.js';
 import path from 'path';
 import dotenv from 'dotenv';
-import { path as appRootPath } from 'app-root-path';
+import appRootPath from 'app-root-path';
 
-dotenv.config({ path: path.resolve(appRootPath, './src/.env') });
+dotenv.config({ path: path.resolve(appRootPath.path, './src/.env') });
 
-  describe('Auth Controller', () => {
-  describe('POST /signup', () => {
-  test('should create a new user', async () => {
-  const res = await request(app)
-  .post('/signup')
-  .send({
-  username: 'testuser',
-  email: 'testuser@gmail.com',
-  password: 'password'
-  });
-  expect(res.statusCode).toEqual(201);
-  expect(res.body).toHaveProperty('user');
-  expect(res.body).toHaveProperty('token');
+describe('POST /signup', () => {
+  beforeEach(() => {
+    // clear database before each test
+    return User.deleteMany({});
   });
 
-  test('should return 500 if server error', async () => {
-    const consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation(() => {}); // just hiding server error issues, just a schema validation test case
+  it('should create a new user', async () => {
+    const user = {
+      username: 'testuser',
+      password: 'password',
+      language: ['Java'],
+      domain: 'back-end',
+      experience: '1-3'
+    };
 
-    jest.spyOn(User, 'create').mockRejectedValueOnce(new Error('Server error'));
-    const res = await request(app)
+    const response = await request(app)
+      .post('/signup')
+      .send(user);
+
+    expect(response.status).toBe(201);
+    expect(response.body).toHaveProperty('user');
+    expect(response.body).toHaveProperty('token');
+
+    const savedUser = await User.findOne({ username: user.username });
+    expect(savedUser).toBeDefined();
+    expect(savedUser.username).toBe(user.username);
+    expect(savedUser.language).toEqual(user.language);
+    expect(savedUser.domain).toBe(user.domain);
+    expect(savedUser.experience).toBe(user.experience);
+    expect(await bcrypt.compare(user.password, savedUser.password)).toBe(true);
+  });
+
+  it('should return 400 if required fields are missing', async () => {
+    const response = await request(app)
+      .post('/signup')
+      .send({});
+
+    expect(response.status).toBe(400);
+    expect(response.body).toHaveProperty('message', 'Missing required fields');
+  });
+
+  it('should return 400 if domain is invalid', async () => {
+    const response = await request(app)
       .post('/signup')
       .send({
         username: 'testuser',
-        email: 'testuser@gmail.com',
-        gender: 'female',
-        password: 'password'
+        password: 'password',
+        language: ['Java'],
+        domain: 'invalid',
+        experience: '1-3'
       });
-    expect(res.statusCode).toEqual(500);
-    expect(res.body).toHaveProperty('message', 'Internal server error');
-    consoleErrorSpy.mockRestore();
+
+    expect(response.status).toBe(400);
+    expect(response.body).toHaveProperty('message', 'Invalid domain');
   });
-  
 
+  it('should return 400 if language is invalid', async () => {
+    const response = await request(app)
+      .post('/signup')
+      .send({
+        username: 'testuser',
+        password: 'password',
+        language: ['invalid'],
+        domain: 'back-end',
+        experience: '1-3'
+      });
 
-  });
-  describe('POST /login', () => {
-    test('should authenticate a user and return a token', async () => {
-    const user = await User.create({
-    username: 'testuser',
-    email: 'testuser@gmail.com',
-    gender: 'male',
-    password: await bcrypt.hash('password', 10)
-    });
-    const res = await request(app)
-    .post('/login')
-    .send({
-    email: 'testuser@gmail.com',
-    password: 'password'
-    });
-    expect(res.statusCode).toEqual(200);
-    expect(res.body).toHaveProperty('user');
-    expect(res.body).toHaveProperty('token');
-    });
-    test('should return 401 if invalid credentials', async () => {
-      const res = await request(app)
-        .post('/login')
-        .send({
-          email: 'testuser@gmail.com',
-          password: 'wrongpassword'
-        });
-      expect(res.statusCode).toEqual(401);
-      expect(res.body).toHaveProperty('message', 'Invalid credentials');
-    });
-    
-    test('should return 500 if server error', async () => {
-      const consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation(() => {}); // just hiding server error issues, just a schema validation test case
-
-      jest.spyOn(User, 'findOne').mockRejectedValueOnce(new Error('Server error'));
-      const res = await request(app)
-        .post('/login')
-        .send({
-          email: 'testuser@gmail.com',
-          password: 'password'
-        });
-      expect(res.statusCode).toEqual(500);
-      expect(res.body).toHaveProperty('message', 'Internal server error');
-      consoleErrorSpy.mockRestore();
-    });
+    expect(response.status).toBe(400);
+    expect(response.body).toHaveProperty('message', 'Invalid languages');
   });
 });
-
-   

@@ -3,16 +3,22 @@ import mongoose from 'mongoose';
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true },
   password: { type: String, required: true },
-  email: { type: String, required: true },
- // dob: { type: Date, required: true },
-  gender: { type: String, enum: ['male', 'female', 'other'], required: false },
- // location: {
- //   type: { type: String },
-  //  coordinates: [Number]
-  //}
+  languages: {
+    type: [String],
+    required: true,
+    enum: ['Java', 'c', 'python', 'js']
+  },
+  domain: {
+    type: String,
+    required: true,
+    enum: ['front-end testing', 'DS', 'back-end']
+  },
+  experience: {
+    type: String,
+    required: true,
+    enum: ['1-3', '3-6', '>6']
+  }
 });
-
-//userSchema.index({ location: '2dsphere' });
 
 const User = mongoose.model('User', userSchema);
 
