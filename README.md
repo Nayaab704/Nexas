@@ -19,6 +19,21 @@ Getting Started
 1. Clone the repository to your local machine using Git:
 2. Install the dependencies by running the following command: npm install
 3. Start the Node.js server by running the following command: node start.js
+4. you can use postman to test the Database
+
+e.g
+http://localhost:8000/signup
+
+Json
+{
+  "username": "johndoe",
+  "password": "mypassword",
+  "languages": ["Java"],
+  "domain": "back-end",
+  "experience": "1-3"
+}
+
+
 4. Run the test for the controllers (tesing the schema): npm run test or npm test
 
 
