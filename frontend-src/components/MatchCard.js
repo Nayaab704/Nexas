@@ -1,9 +1,11 @@
+import emptyProfilePic from "../assets/img/empty_profile.png"
+
 const MatchCard = () => {
     return ( 
         <div className="match-card">
             <div className="profile">
                 <div className="profile-pic">
-                    X
+                    <img src={ emptyProfilePic } alt="Profile Pic"/>
                 </div>
                 <div className="profile-name">
                     Name
