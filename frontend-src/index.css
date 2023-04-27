@@ -257,10 +257,12 @@ a {
   flex-direction: column;
   padding: 5px;
   margin: 20px;
+  width: 550px;
   border: 1px solid #000000;
 }
 .personal-info .personal-line1 {
   display: flex;
+  justify-content: space-around;
   padding: 5px;
 }
 .personal-info .personal-line1 .email-field {
@@ -274,6 +276,7 @@ a {
 }
 .personal-info .personal-line2 {
   display: flex;
+  justify-content: space-around;
   padding: 5px;
 }
 .personal-info .personal-line2 .new-password-field {
@@ -289,11 +292,13 @@ a {
   display: flex;
   flex-direction: column;
   padding: 5px;
+  width: 550px;
   border: 1px solid #000000;
   margin: 20px;
 }
 .professional-info .professional-line1 {
   display: flex;
+  justify-content: space-around;
   padding: 5px;
 }
 .professional-info .professional-line1 .company-field {
@@ -302,9 +307,14 @@ a {
 .professional-info .professional-line1 .field-field {
   margin: 5px;
 } 
-.professional-info .professional-line1 .experience-field {
-  margin: 5px;
+.professional-info .experience {
+  margin: 10px;
 } 
+.professional-info .experience .experience-options {
+  display: flex;
+  margin: 5px;
+  justify-content: space-around;
+}
 
 /* Preferences Styling */
 
@@ -312,8 +322,67 @@ a {
   display: flex;
   flex-direction: column;
   padding: 5px;
+  width: 550px;
   margin: 20px;
   border: 1px solid #000000;
+}
+.preferences .proficiencies-label{
+  display: flex;
+  justify-content: center;
+}
+.preferences .proficiencies-languages .language-header{
+  margin: 5px;
+  padding-left: 5px;
+}
+.preferences .proficiencies-languages .language-options{
+  display: flex;
+  justify-content: space-around;
+}
+.preferences .proficiencies-platforms .platform-header{
+  margin: 5px;
+  padding-left: 5px;
+}
+.preferences .proficiencies-platforms .platform-options{
+  display: flex;
+  justify-content: space-around;
+}
+.preferences .proficiencies-domains .domain-header{
+  margin: 5px;
+  padding-left: 5px;
+}
+.preferences .proficiencies-domains .domain-options{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+.preferences .interests-label{
+  display: flex;
+  justify-content: center;
+}
+.preferences .interests-languages .language-header{
+  margin: 5px;
+  padding-left: 5px;
+}
+.preferences .interests-languages .language-options{
+  display: flex;
+  justify-content: space-around;
+}
+.preferences .interests-platforms .platform-header{
+  margin: 5px;
+  padding-left: 5px;
+}
+.preferences .interests-platforms .platform-options{
+  display: flex;
+  justify-content: space-around;
+}
+.preferences .interests-domains .domain-header{
+  margin: 5px;
+  padding-left: 5px;
+}
+.preferences .interests-domains .domain-options{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
 }
 
 /* Profile Styling */
