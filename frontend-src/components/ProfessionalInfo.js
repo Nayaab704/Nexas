@@ -11,9 +11,31 @@ const ProfessionalInfo = () => {
                     <p>Field</p>
                     <input />
                 </div>
-                <div className="experience-field">
-                    <p>Experience</p>
-                    <input />
+            </div>
+            <div className="experience">
+                <p>Experience: </p>
+                <div className="experience-options">
+                    <label>
+                        <input
+                        type="radio"
+                        name="options"
+                        />
+                        {" "} 1-3 Years
+                    </label>
+                    <label>
+                        <input
+                        type="radio"
+                        name="options"
+                        />
+                        {" "} 2-6 Years
+                    </label>
+                    <label>
+                        <input
+                        type="radio"
+                        name="options"
+                        />
+                        {" "} {">"}6 Years
+                    </label>
                 </div>
             </div>
             <button className="save-button">
