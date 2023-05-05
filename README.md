@@ -34,13 +34,7 @@ Json
 }
 
 
-4. Run the test for the controllers (tesing the schema): npm run test or npm test
+test controllers with jest are broken for now (tesing the schema with jest): npm run test or npm test
 
 
 
-
-additional information: User Groups schema
-
-- user:  reference to the User model. It stores the ObjectId of a user in the User collection. It is a required field.
-- group: This field is a reference to the Group model. It stores the ObjectId of a group in the Group collection. It is also a required field.
-- role: This field is a string that can have one of two possible values: 'admin' or 'member'. It represents the user's role within the group. It is a required field.

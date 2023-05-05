@@ -8,11 +8,13 @@ import path from 'path';
 import dotenv from 'dotenv';
 
 import pkg from 'app-root-path';
+import cors from 'cors';
 const appRootPath = pkg.path;
 
 dotenv.config({ path: path.resolve(appRootPath, './src/.env') });
 
 const app = express();
+app.use(cors());
 
 app.use(express.json());
 app.use(authRoutes);
