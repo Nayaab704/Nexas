@@ -113,8 +113,7 @@ To invoke the matching algorithm that suggests users based on similar interests 
 
 ## Documentation
 
-Project Proposal: [Link](Docs/Proposal.pdf)  
-Design Sketches: [Link](Docs/design_sketches.pdf)  
+Project Proposal: [Link](Docs/Proposal.pdf)   
 Final Report: [Link](Docs/SE FINAL REPORT PDF.pdf)  
 Project Abstract: [Link](Docs/Abstract_NEXAS.pdf)  
 
