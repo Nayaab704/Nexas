@@ -59,3 +59,50 @@ additional information: User Groups schema
 - user:  reference to the User model. It stores the ObjectId of a user in the User collection. It is a required field.
 - group: This field is a reference to the Group model. It stores the ObjectId of a group in the Group collection. It is also a required field.
 - role: This field is a string that can have one of two possible values: 'admin' or 'member'. It represents the user's role within the group. It is a required field.
+
+
+## Setup
+
+The below steps are to be folled to setup and run the project on local host,
+
+- Clone the repository using `git clone https://github.com/Nayaab704/Nexas.git`
+- Setup Python environment using Anaconda
+- You may need to uninstall and re-install python as some packages would be incompatible
+- Install the dependencies using `pip install -r requirements.txt`
+- Setup a MongoDB server and connect to the database.js.
+- Populate the [.env](.env) file with the Mongodb server details.
+  
+### Troubles?
+- If encountering trouble with the python files, please re-install latest version of pyhton.
+- Use Anaconda module to install required packages
+
+
+## Tests
+
+To run the tests files, follow these steps,
+
+- Clone the repository using `git clone https://github.com/Nayaab704/Nexas.git`
+- Setup Python environment,
+- Install the dependencies using `pip install -r requirements.txt`
+- Test files can be found under the test folder in main directory
+- Run the tests using `unittest` module 
+
+## Features
+
+### Match-making for New User
+
+#### OBJECTIVE : 
+To invoke the matching algorithm that suggests users based on similar interests and expertise  which further facilitates learning and collaboration among Engineers/users with similar backgrounds and interests.
+
+#### Use Case Scenario : 
+
+#### 1. Pre-Conditions:
+User has access to the web application, has a valid e-mail address, and meets system requirements
+
+#### 2. Main Flow:
+User Sign-up: User visit the web application and sign up by providing their email address and creates account
+Profile Creation: personal and technical information, including their  interests and areas of expertise
+
+#### 3. Post-Conditions:
+Recommended Connections: The algorithm matches users based on their interests and skillsets and let users browse through a range of recommended matches.
+
