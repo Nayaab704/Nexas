@@ -90,7 +90,7 @@ To run the tests files, follow these steps,
 
 ### Match-making for New User
 
-#### OBJECTIVE : 
+#### USE CASE : 
 To invoke the matching algorithm that suggests users based on similar interests and expertise  which further facilitates learning and collaboration among Engineers/users with similar backgrounds and interests.
 
 #### Use Case Scenario : 
@@ -108,7 +108,7 @@ To invoke the matching algorithm that suggests users based on similar interests 
 
 #### User Diagram
 
-![Recommendations User Diagram](https://drive.google.com/file/d/1irsH36aC4xkzmlWJogRSISHw6gjQjUmD/view)
+![Recommendations User Diagram](https://github.com/Nayaab704/Nexas/blob/main/Docs/User%20Diag.png)
 
 ## Documentation
 
