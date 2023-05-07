@@ -25,7 +25,7 @@ Before you can run this application, you'll need to have the following installed
 
 
 Getting Started
-1. Clone the repository to your local machine using Git:
+1. Clone the repository to your local machine using: `git clone https://github.com/Nayaab704/Nexas`
 2. Install the dependencies by running the following command: npm install
 3. Start the Node.js server by running the following command: node start.js
 4. you can use postman to test the Database
