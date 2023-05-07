@@ -1,5 +1,5 @@
 # Nexas
-PeerMe 
+## PeerMe 
 
 The web application facilitates connecting Engineers. The application performs the following functions:
 
@@ -16,7 +16,7 @@ The web application facilitates connecting Engineers. The application performs t
 
 
 
-Prerequisites
+## Prerequisites
 Before you can run this application, you'll need to have the following installed:
 
 1. Node.js
