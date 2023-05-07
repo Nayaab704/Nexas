@@ -6,6 +6,15 @@ The web application facilitates connecting Engineers. The application performs t
 1. Perform algorithmic matching to suggest user connections based on their technical profiles. 
 2. The users can filter profiles, discover open projects and form collaboration groups
 
+## Team Description
+| Name                                                       | GitHub ID      | VT PID     |
+| ---------------------------------------------------------  | -------------- | ---------- |
+| [Sadath Ullah Khan Mohammed](https://github.com/sadathkhn4)| sadathkhn4     | msadath    |
+| [Nayaab Azim](https://github.com/Nayaab704)                | Nayaab704      | Nayaab     |
+| [Evan Phaupe](https://github.com/EvanPhaup)                | EvanPhaup      | phaupe     |
+| [Adeyemi Aina](https://github.com/babz007)                 | babz007        | ainababs0  |
+
+
 
 Prerequisites
 Before you can run this application, you'll need to have the following installed:
