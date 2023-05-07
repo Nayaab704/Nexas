@@ -115,6 +115,7 @@ To invoke the matching algorithm that suggests users based on similar interests 
 Project Proposal: [Link](Docs/Proposal.pdf)   
 Final Report: [Link](Docs/SE FINAL REPORT PDF.pdf)  
 Project Abstract: [Link](Docs/Abstract_NEXAS.pdf)  
+Project Demo: [Link](Docs/Nexas Demo.pdf)   
 
 ## Project Management
 
