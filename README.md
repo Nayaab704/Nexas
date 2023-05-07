@@ -106,3 +106,15 @@ To invoke the matching algorithm that suggests users based on similar interests 
 #### 3. Post-Conditions:
 - Recommended Connections: The algorithm matches users based on their interests and skillsets and let users browse through a range of recommended matches.
 
+
+#### User Diagram
+
+![Recommendations User Diagram](https://drive.google.com/file/d/1irsH36aC4xkzmlWJogRSISHw6gjQjUmD/view?usp=share_link)
+
+## Documentation
+
+Project Proposal: [Link](Docs/Proposal.pdf)  
+Design Sketches: [Link](Docs/design_sketches.pdf)  
+Final Report: [Link](Docs/SE FINAL REPORT PDF.pdf)  
+Project Abstract: [Link](Docs/Abstract_NEXAS.pdf)  
+
