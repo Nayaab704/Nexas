@@ -97,12 +97,12 @@ To invoke the matching algorithm that suggests users based on similar interests 
 #### Use Case Scenario : 
 
 #### 1. Pre-Conditions:
-User has access to the web application, has a valid e-mail address, and meets system requirements
+- User has access to the web application, has a valid e-mail address, and meets system requirements
 
 #### 2. Main Flow:
-User Sign-up: User visit the web application and sign up by providing their email address and creates account
-Profile Creation: personal and technical information, including their  interests and areas of expertise
+- User Sign-up: User visit the web application and sign up by providing their email address and creates account
+- Profile Creation: personal and technical information, including their  interests and areas of expertise
 
 #### 3. Post-Conditions:
-Recommended Connections: The algorithm matches users based on their interests and skillsets and let users browse through a range of recommended matches.
+- Recommended Connections: The algorithm matches users based on their interests and skillsets and let users browse through a range of recommended matches.
 
