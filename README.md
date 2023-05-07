@@ -25,6 +25,9 @@ Before you can run this application, you'll need to have the following installed
 1. Node.js
 2. MongoDB
 3. Jest
+4. Python
+5. React.js
+6. Anaconda re-installed
 
 
 Getting Started
