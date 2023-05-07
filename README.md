@@ -117,3 +117,8 @@ Project Proposal: [Link](Docs/Proposal.pdf)
 Final Report: [Link](Docs/SE FINAL REPORT PDF.pdf)  
 Project Abstract: [Link](Docs/Abstract_NEXAS.pdf)  
 
+## Project Management
+
+Kanban Board: [Link](https://github.com/users/Nayaab704/projects/3)  
+Issue Tracker: [Link](https://github.com/Nayaab704/Nexas/issues)  
+
