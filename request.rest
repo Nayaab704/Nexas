@@ -1,0 +1,22 @@
+GET http://localhost:8001/users
+
+###
+
+POST http://localhost:8001/users/sign-up
+Content-Type: application/json
+
+{
+  "name": "sadath",
+  "email": "sadath@gmail.com",
+  "password": "poor drake"
+}
+
+###
+
+POST http://localhost:8001/users/login
+Content-Type:  application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "admin"
+}
