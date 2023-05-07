@@ -6,6 +6,8 @@ The web application facilitates connecting Engineers. The application performs t
 1. Perform algorithmic matching to suggest user connections based on their technical profiles. 
 2. The users can filter profiles, discover open projects and form collaboration groups
 
+The idea of the project is to develop a web-based application (NEXAS) that would facilitate connecting and collaborating between software engineers. The application would perform algorithmic matching to suggest user connections based on their technical profiles and interests. The users can find recommended connections based on programming language, domain, experience, discover open projects, and form collaboration groups. Using this application will enable users to connect with peers having similar interests, thereby creating a community network tailored exclusively for software engineers.
+
 ## Team Description
 | Name                                                       | GitHub ID      | VT PID     |
 | ---------------------------------------------------------  | -------------- | ---------- |
