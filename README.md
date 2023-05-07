@@ -82,9 +82,8 @@ The below steps are to be folled to setup and run the project on local host,
 To run the tests files, follow these steps,
 
 - Clone the repository using `git clone https://github.com/Nayaab704/Nexas.git`
-- Setup Python environment,
-- Install the dependencies using `pip install -r requirements.txt`
-- Test files can be found under the test folder in main directory
+- Setup Python environment
+- Test files can be found under the test folder in main directory - `tests/UserRecommender_Test.py`
 - Run the tests using `unittest` module 
 
 ## Features
@@ -109,7 +108,7 @@ To invoke the matching algorithm that suggests users based on similar interests 
 
 #### User Diagram
 
-![Recommendations User Diagram](https://drive.google.com/file/d/1irsH36aC4xkzmlWJogRSISHw6gjQjUmD/view?usp=share_link)
+![Recommendations User Diagram](https://drive.google.com/file/d/1irsH36aC4xkzmlWJogRSISHw6gjQjUmD/view)
 
 ## Documentation
 
