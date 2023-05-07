@@ -1,0 +1,13 @@
+const request = require('supertest');
+const login = require('./server');
+
+describe('Login API', () => {
+  test('responds with 200 status and token on successful login', async () => {
+    const response = await request(login)
+      .post('/users/login')
+      .send({ username: 'Doraemon', password: 'test' });
+
+    expect(response.statusCode).toBe(200);
+    expect(response.body.token).toBeTruthy();
+  });
+});
